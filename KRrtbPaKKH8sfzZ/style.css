@@ -1,0 +1,18 @@
+html, body {
+    background-color: black;
+    font-family: 'Trajan';
+    color: white;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+	font-family: 'Trajan';
+	font-style: normal;
+	font-weight: 400;
+	src: url("/static/fonts/Trajan Pro Regular.ttf");
+}
