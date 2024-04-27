@@ -1,0 +1,185 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    user-select: none;
+}
+
+#content, .go-fullscreen {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#pressStart {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+#pressStart img:not(.hover-img) {
+    width: 30vw;
+}
+
+#pressStart .hover-img {
+    position: absolute;
+    top: calc(50% + 5px);
+    left: 50%;
+    width: 80px;
+    transform: translate(-50%, -50%);
+}
+
+#userIface {
+    position: absolute;
+    z-index: 10;
+    left: 2vw;
+    bottom: 3vh;
+    font-size: 1.5em;
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.356);
+}
+
+#userIface .sys-symbol {
+    display: inline-block;
+    position: relative;
+    width: 0.6em;
+    margin: 0px;
+    padding: 0px;
+}
+
+#userIface .input-holder {
+    display: inline-block;
+    background-color: rgba(20, 20, 20, 0.856);
+    border: 1px solid gray;
+    border-top: none;
+    border-radius: 0px 0px 7px 7px;
+    padding-left: 10px;
+    width: calc(30vw - 2px);
+    min-width: calc(450px - 2px);
+}
+
+#userIface input,
+#userIface input:focus {
+    color: white;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-family: dosis;
+    font-size: 1em;
+    padding: 0.3em 0.3em 0.3em 0;
+    width: 90%;
+}
+
+#systemOut {
+    background-color: rgba(20, 20, 20, 0.856);
+    position: relative;
+    width: 30vw;
+    min-width: 450px;
+    max-height: 30vh;
+    min-height: 10vh;
+    overflow-y: auto;
+    font-family: dosis;
+    font-size: 0.8em;
+    border-radius: 7px 7px 0px 0px;
+    border: 1px solid gray;
+    padding: 4px;
+}
+
+#systemOut::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+#systemOut::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+#systemOut::-webkit-scrollbar-thumb {
+    background-color: rgb(22, 22, 22);
+}
+
+#systemOut .type-user {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: rgb(255, 229, 156);
+}
+
+#systemOut .box {
+    padding-left: 0.8em;
+}
+
+#systemOut .box > *::before {
+    content: "- ";
+}
+
+#systemOut cr {
+    display: block;
+    height: 0.5em;
+}
+
+.error {
+    color: red;
+}
+
+.go-fullscreen .message {
+    display: inline-block;
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    font-family: minecraft;
+    text-align: center;
+}
+
+.go-fullscreen .image {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.background img,
+.fx {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    border: 2px solid gray;
+}
+
+.fx {
+    border: 0px;
+    z-index: 2;
+    /* note: aspect ratio is 16:9, otherwise change that number */
+    height: calc(100vw * 0.5625);
+    overflow: hidden;
+}
+
+/* Font definitions ----------------------------------------- */
+
+@font-face {
+    font-family: minecraft;
+    src: url(/fonts/minecraft.ttf);
+}
+
+@font-face {
+    font-family: orbitron;
+    src: url(/fonts/orbitron-regular.ttf);
+}
+
+@font-face {
+    font-family: dosis;
+    src: url(/fonts/dosis_variablefont_wght.ttf);
+}

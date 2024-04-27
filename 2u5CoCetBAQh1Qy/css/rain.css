@@ -1,0 +1,52 @@
+:root {
+    --drop-size: 0.5vw;
+    --drop-speed: 0.3s;
+    --drop-opacity: 0.3;
+    --drop-color: 114, 170, 223;
+}
+
+.rain {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.rain.back-row {
+    z-index: 1;
+    bottom: 60px;
+    opacity: 0.5;
+}
+
+.drop {
+    position: absolute;
+    bottom: 110vh;
+    width: var(--drop-size);
+    height: 120px;
+    pointer-events: none;
+    animation: drop var(--drop-speed) linear infinite;
+}
+
+@keyframes drop {
+    0%   { transform: translateY(0vh);   }
+    100% { transform: translateY(120vh); }
+}
+
+.stem {
+    width: var(--drop-size);
+    height: 60%;
+    margin-left: 7px;
+    background: linear-gradient(to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(var(--drop-color), var(--drop-opacity))
+    );
+    animation: stem var(--drop-speed) linear infinite;
+}
+
+@keyframes stem {
+    0%   { opacity: 0.5; }
+    10%  { opacity: 1;   }
+    85%  { opacity: 1;   }
+    100% { opacity: 0;   }
+}
