@@ -171,15 +171,15 @@ html, body {
 
 @font-face {
     font-family: minecraft;
-    src: url(/fonts/minecraft.ttf);
+    src: url(../fonts/minecraft.ttf);
 }
 
 @font-face {
     font-family: orbitron;
-    src: url(/fonts/orbitron-regular.ttf);
+    src: url(../fonts/orbitron-regular.ttf);
 }
 
 @font-face {
     font-family: dosis;
-    src: url(/fonts/dosis_variablefont_wght.ttf);
+    src: url(../fonts/dosis_variablefont_wght.ttf);
 }
