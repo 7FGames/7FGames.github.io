@@ -39,9 +39,7 @@ class Lever extends GameObject {
 class LeverLock extends GameObject {
    constructor({on_activate}) {
       super("jail-lock", "mecanismo", {male: true, one: true, take: false});
-      // FIXME: DEVEL!
-      // this.is.actionable = false;
-      this.is.actionable = true;
+      this.is.actionable = false;
       this._on_activate_cb = on_activate;
    }
 
