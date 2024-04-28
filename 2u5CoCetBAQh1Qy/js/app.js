@@ -33,5 +33,5 @@ window.addEventListener("load", function() {
    $('#pressStart').show().click(start_app);
 
    // NOTE: just for devel
-   $('#pressStart').click();
+   // $('#pressStart').click();
 });
